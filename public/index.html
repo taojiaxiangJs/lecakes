@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="project">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, orientation=landscape">
+    <title>personal center</title>
+    <link rel="stylesheet" href="./stylesheets/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="./stylesheets/personal.css"/>
+    <link rel="stylesheet" href="./components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" href="./components/swiper/dist/css/swiper.css"/>
+    <link rel="stylesheet" href="./components/swiper/dist/css/animate.min.css"/>
+    <link rel="stylesheet" href="./stylesheets/index.css"/>
+    <link rel="stylesheet" href="./stylesheets/gitf.css"/>
+    <link rel="stylesheet" href="./stylesheets/gift_detail.css"/>
+    <link rel="stylesheet" href="./stylesheets/shopCar.css"/>
+</head>
+
+
+
+<body>
+
+<div ui-view="mainView"></div>
+<nav class="nav_index">
+    <ul>
+        <li ui-sref="index">
+            <span class="span_img1 span_img"></span>
+            <span class="span">首页</span>
+        </li>
+        <li ui-sref="logined">
+            <span class="span_img2 span_img"></span>
+            <span class="span">蛋糕馆</span>
+        </li>
+        <li ui-sref="gift">
+            <span class="span_img3 span_img"></span>
+            <span class="span">礼品馆</span>
+        </li>
+        <li ui-sref="shopCar({name:'empty'})">
+            <span class="span_img4 span_img"></span>
+             <span class="span">购物车</span>
+        </li>
+        <li ui-sref="personal">
+            <span class="span_img5 span_img"></span>
+            <span class="span">个人中心</span>
+        </li>
+    </ul>
+</nav>
+
+
+</body>
+
+
+<script src="./components/jquery/dist/jquery.js"></script>
+<script src="./components/angular/angular.js"></script>
+<script src="./components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="./components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="./components/swiper/dist/js/swiper.jquery.js"></script>
+<script src="./components/swiper/dist/js/swiper.animate1.0.2.min.js"></script>
+
+
+
+<script src="./js/config/app.js"></script>
+<script src="./js/controller/controller.js"></script>
+<script src="./js/services/login.js"></script>
+<script src="./js/services/shopSever.js"></script>
+<script src="./js/gift.js"></script>
+<!--<script src="./js/index_footer.js"></script>-->
+</html>

@@ -1,0 +1,77 @@
+<!--<!DOCTYPE html>
+<html ng-app="project">
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, orientation=landscape">
+    <title>personal center</title>
+    <link rel="stylesheet" href="../stylesheets/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/font-awesome/css/font-awesome.css"/>
+    <link rel="stylesheet" href="../stylesheets/personal.css"/>
+</head>
+<body>-->
+<style>
+    .isDisplay{
+        display: none;
+    }
+</style>
+   <div class="personal">
+       <section class="section1">
+           <div class="div">
+               <div class="divImg">
+                   <img src="../images/avatar_new.png" alt=""/>
+               </div>
+           </div>
+           <div class="div">
+               <button ui-sref="login" ng-class="{'isDisplay':!ddd}">登录</button>
+               <div class="user" ng-class="{'isDisplay':ddd}">
+                   <!--<script>alert(3)</script>-->
+                   <p>{{username}}</p>
+                   <p>积分:0</p>
+               </div>
+           </div>
+       </section>
+       <section class="section2">
+           <span class="aa" ng-click="isLogin1('1')"><span class="fa fa-credit-card-alt"></span>待付款</span>
+           <span class="aa" ng-click="isLogin1('2')"><span class="fa fa-calendar-o"></span>待发货</span>
+           <span class="aa" ng-click="isLogin1('3')"><span class="fa fa-truck"></span>待收货</span>
+           <span class="aa a_last" ng-click="isLogin1('4')"><span class="fa fa-th-list span_last"></span>我的订单</span>
+       </section>
+       <section class="section3">
+           <p class="hh">
+               <span class="bb" ng-click="isLogin1()">
+                   <span class="span_bef fa fa-tags"></span>
+                   优惠卡券
+                   <span class="span_aft fa fa-angle-right "></span>
+               </span>
+           </p>
+           <p class="hh">
+               <span class="bb" ng-click="isLogin1()">
+                   <span class="span_bef fa fa-cc-paypal"></span>
+                   Leclub
+                   <span class="span_aft fa fa-angle-right "></span>
+               </span>
+           </p>
+       </section>
+       <section class="section4">
+           <p class="hh about1">
+               <a ui-sref="aboutOur">
+                   关于我们
+                   <span class="span_aft fa fa-angle-right "></span>
+               </a>
+           </p>
+           <p class="hh about1">
+               <a ui-sref="aboutBill">
+                   关于发票
+                   <span class="span_aft fa fa-angle-right "></span>
+               </a>
+           </p>
+       </section>
+       <a class="tel" href="tel:400-157-8578">客服电话:400-157-8578</a>
+   </div>
+   <!--<script src="../components/angular/angular.js"></script>
+   <script src="../components/angular-ui-router/release/angular-ui-router.js"></script>
+   <script src="../js/config/app.js"></script>
+   <script src="../js/controller/controller.js"></script>
+   <script src="../js/services/login.js"></script>
+</body>
+</html>-->

@@ -1,0 +1,152 @@
+<header id="city">
+    <span class="title">诺心 LECAKE</span>
+    <a href="" class="glyphicon glyphicon-map-marker" ><span>上海</span></a>
+</header>
+<div class="city-selector">
+    <div class="mask"></div>
+    <div class="city-modal">
+        <div class="header">
+            <h1>配送至</h1>
+            <p>当前定位城市:&nbsp;&nbsp;<strong>{{city}}</strong></p>
+        </div>
+        <div class="content">
+            <h3>更多城市</h3>
+            <div class="cities">
+                <a href="" class="active">{{city}}</a>
+                <a href="" ng-model="cityname">北京</a>
+                <a ui-sref="({'name':'广州'})" >广州</a>
+                <a ui-sref="#/index/?name" ng-model="cityname" >南京</a>
+                <a href="#/index/:name" ng-model="cityname">成都</a>
+                <a href="#/index/:name" ng-model="cityname" >重庆</a>
+                <a href="#/index/:name" ng-model="cityname" >深圳</a>
+                <a href="#/index/:name" ng-model="cityname" >杭州</a>
+                <a href="#/index/:name" ng-model="cityname" >苏州</a>
+                <a href="#/index/:name" ng-model="cityname" >天津</a>
+                <a href="#/index/:name" ng-model="cityname" >宁波</a>
+                <a href="#/index/:name" ng-model="cityname">无锡</a>
+                <a href="#/index/:name" ng-model="cityname">绍兴</a>
+                <a href="#/index/:name" ng-model="cityname">嘉兴</a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="zhou">
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <p class="ani" swiper-animate-duration="0.5s" >
+                    <a href=""><img src="./images/index_1.jpg" alt=""/></a></p>
+            </div>
+            <div class="swiper-slide">
+                <p class="ani"  swiper-animate-duration="0.5s" >
+                    <a href=""><img src="./images/index_2.jpg" alt=""/></a>
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <p class="ani" swiper-animate-duration="0.5s" >
+                    <a href=""><img src="./images/index_3.jpg" alt=""/></a>
+                </p>
+            </div>
+            <div class="swiper-slide">
+                <p class="ani" swiper-animate-duration="0.5s" >
+                    <a href=""><img src="./images/index_4.jpg" alt=""/></a>
+                </p>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+</section>
+<div class="zhou_goods">
+    <div class="title">
+        <h1>为你推荐</h1>
+        <h2>Sincerely Recommend</h2>
+    </div>
+    <div class="catetory">
+        <div class="cake">
+            <ul>
+                <li>
+                    <a href=""><img src="./images/list_15374.jpg" alt=""/></a>
+                    <h3>钻石雪域牛乳芝士蛋糕</h3>
+                    <a href="" class="shopicon">+</a>
+                    <p>Diamond Cheesecake</p>
+                </li>
+                <li>
+                    <a href=""><img src="./images/list_15468.jpg" alt=""/></a>
+                    <h3>蟹蟹偷你吃</h3>
+                    <a href="" class="shopicon">+</a>
+                    <p>Yum  Yum Cake</p>
+                </li>
+                <li>
+                    <a href=""><img src="./images/list_15322.jpg" alt=""/></a>
+                    <h3>哈!蜜瓜蛋糕</h3>
+                    <a href="" class="shopicon">+</a>
+                    <p>Hey Melon</p>
+                </li>
+
+                <li>
+                    <a href=""><img src="./images/list_15325.jpg" alt=""/></a>
+                    <h3>芒果熔岩星球蛋糕</h3>
+                    <a href="" class="shopicon">+</a>
+                    <p>Mango Planet</p>
+                </li>
+                <li>
+                    <a href=""><img src="./images/list_15374.jpg" alt=""/></a>
+                    <h3>莓果绵绵蛋糕</h3>
+                    <a href="" class="shopicon">+</a>
+                    <p>Straberry Cream Cake</p>
+                </li>
+                <li>
+                    <a href=""><img src="./images/list_12602.jpg" alt=""/></a>
+                    <h3>环游世界.春夏季蛋糕</h3>
+                    <a href="" class="shopicon">+</a>
+                    <p>Around The World Cake</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="zhou_more">
+    <h2>全部蛋糕</h2>
+    <a href="">more</a>
+</div>
+<footer class="zhou_footer">
+    <div>
+    <span class="glyphicon glyphicon-phone">
+    </span>
+        <p>触屏版</p>
+    </div>
+    <div>
+    <span class="glyphicon glyphicon-blackboard">
+    </span>
+        <p>电脑版</p>
+    </div>
+    <div style="clear: both"></div>
+</footer>
+<h4 class="zhou_h4">copyright © 2010-2017 诺心lecake.com版权所有</h4>
+
+<script>
+    var mySwiper = new Swiper ('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+            swiperAnimateCache(swiper); //隐藏动画元素
+            swiperAnimate(swiper); //初始化完成开始动画
+        },
+        onSlideChangeEnd: function(swiper){
+            swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+        }
+    })
+    var city=document.getElementById('city');
+    var cityinner=document.getElementsByClassName('city-selector')[0];
+
+    city.onclick=function(){
+        cityinner.style.display='block';
+        cityinner.style.position='fixed';
+        cityinner.style.zIndex=999;
+    }
+    cityinner.onclick=function(){
+        cityinner.style.display='none';
+    }
+</script>

@@ -1,0 +1,26 @@
+<style>
+    .libgd{
+    background:white !important;
+    }
+</style>
+<div class="logined">
+    <section class="section1">
+        <ul class="tabs">
+            <li class="li_logined1" ng-class="{'libgd':flag==4}">全部</li>
+            <li class="li_logined1" ng-class="{'libgd':flag==1}">待付款</li>
+            <li class="li_logined1" ng-class="{'libgd':flag==2}">待发货</li>
+            <li class="li_logined1" ng-class="{'libgd':flag==3}">待收货</li>
+        </ul>
+        <div class="tabs_content">
+            <img src="../images/order_empty.png" alt=""/>
+            <p>您还没有相关订单哦</br><span ui-sref="allcake">快去逛逛吧~</span></p>
+        </div>
+    </section>
+</div>
+<script>
+   $('li').each(function () {
+       $(this).click(function () {
+           $(this).addClass('libgd').siblings().removeClass('libgd')
+       })
+   })
+</script>
